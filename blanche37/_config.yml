@@ -1,37 +1,51 @@
 
-exclude:
-  - "/vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE.md"
-  - "*.gemspec"
+# Syntax highlighting
+markdown:            redcarpet
+highlighter:         rouge
 
-keep_files:
-  - "CNAME"
-  - ".git"
-  - ".gitignore"
+# Permalinks
+permalink:           /:title
 
+# Setup
+timezone:            your timezone # eg. Asia/Kathmandu
+locale:              your locale language # eg. en_us
+name:				         Social Links
+title:               yun
+tagline:             'tagline'
+description:         'description'
+url:                 "https://blanche37.github.io"
+rss:                 rss feed url
+baseurl:             '/'
+baseurl_posts_img:   '/assets/images/posts/'
+baseurl_featured_img: '/assets/images/hero/'
+baseurl_featured_thumbnail: '/assets/images/thumbnail/'
+baseurl_javascripts: '/assets/javascripts/'
+icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
-# Site settings
-title: yun
-subtitle: "A free HTML5 agency template"
-url: "https://blanche37.github.io" # the base hostname & protocol for your site
-# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: ""
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
+author:
+  name:           	 yun
+  url:            	 "https://blanche37.github.io"
+  facebook:          # username
+  twitter:           # username
+  google_plus:       # username
+  linkedin:          # username
+  dribbble:          # username
+  pinterest:         # username
+  kiva:              # username
 
-# Build settings
-markdown: kramdown
+fb_admins:           # your facebook profile id
+fb_appid:            # your facebook app id
 
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+# Server
+destination:      	 ./_site
+exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
+port:             	 9001
 
-# Category descriptions (for archive pages)
-descriptions: My Sub Blog
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
-
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "default"
